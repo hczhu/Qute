@@ -1,7 +1,7 @@
 # Qute
 
-Qute is a C++ library for a lightweight search query execution engine. Qute supports [Qute query language](https://github.com/TickerTick/Qute#qute-query-language). 
-<br>See the code snippet below for a simple example of using Qute. The full compilable code is at [examples/full_text_search.cc](https://github.com/TickerTick/Qute/blob/main/examples/full_text_search.cc)
+Qute is a C++ library for a lightweight search query execution engine. Qute supports [Qute query language](https://github.com/hczhu/Qute#qute-query-language). 
+<br>See the code snippet below for a simple example of using Qute. The full compilable code is at [examples/full_text_search.cc](https://github.com/hczhu/Qute/blob/main/examples/full_text_search.cc)
 
 ```c++
 const std::vector<std::string> kMarkTwainQuotes = {
@@ -86,7 +86,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 git_repository(
     name = "com_github_tickertick_qute",
     commit = "58c152688c4958605c657cf3e40d1aba3fee908a",
-    remote = "https://github.com/TickerTick/Qute.git",
+    remote = "https://github.com/hczhu/Qute.git",
 )
 
 http_archive(
@@ -113,7 +113,7 @@ Also specify compiler option `-std=c++2a` in either Bazel command line or in the
 ```
 build --cxxopt='-std=c++2a'
 ```
-See [an example C++ project depending on Qute](https://github.com/TickerTick/Qute-examples)
+See [an example C++ project depending on Qute](https://github.com/hczhu/Qute-examples)
 
 ## Build
 
@@ -121,7 +121,7 @@ Qute is built and tested on Linux. Qute uses [Bazel](https://bazel.build/) to bu
 Run the following commands in a Linux Shell to build Qute library.
 
 ```bash 
-git clone https://github.com/TickerTick/Qute.git
+git clone https://github.com/hczhu/Qute.git
 cd Qute
 ./install-bazel.sh
 bazel build :qute
