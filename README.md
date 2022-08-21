@@ -84,8 +84,8 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 git_repository(
-    name = "com_github_tickertick_qute",
-    commit = "58c152688c4958605c657cf3e40d1aba3fee908a",
+    name = "com_github_hczhu_qute",
+    commit = "27f35f48390b5b3aa218ad6f55276d8567f96518",
     remote = "https://github.com/hczhu/Qute.git",
 )
 
@@ -106,7 +106,7 @@ http_archive(
 To depend on Qute, add the following dependancy to your Bazel target.
 ```
     deps = [
-        "@com_github_tickertick_qute//:qute",
+        "@com_github_hczhu_qute//:qute",
     ],
 ```
 Also specify compiler option `-std=c++2a` in either Bazel command line or in the `.bazelrc` file.
