@@ -1,0 +1,27 @@
+package(default_visibility = ["//visibility:private"])
+
+cc_test(
+    name = "iterator_test",
+    timeout = "short",
+    srcs = [
+        "iterator_test.cc",
+    ],
+    deps = [
+        "//:qute",
+        "@com_github_googletest//:gtest_main",
+        "@com_github_glog//:glog",
+    ],
+)
+
+cc_test(
+    name = "query_parser_test",
+    timeout = "short",
+    srcs = [
+        "query_parser_test.cc",
+    ],
+    deps = [
+        "//:qute",
+        "@com_github_googletest//:gtest_main",
+        "@com_github_glog//:glog",
+    ],
+)

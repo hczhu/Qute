@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+    name = "qute",
+    srcs = [
+      "qute/iterator.cc",
+      "qute/query_parser.cc",
+    ],
+    hdrs = [
+      "qute/iterator.h",
+      "qute/query_parser.h",
+    ],
+    deps = [
+        "@com_github_glog//:glog",
+    ],
+    include_prefix = "qute",
+)
