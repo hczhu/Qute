@@ -235,7 +235,7 @@ IteratorPtr QueryParser::getIterator(const std::string& q) {
       auto& topOp = stack.top();
       if (!topOp.tag.empty()) {
         logAndThrow(currentPos,
-                    "Multiple tags for one operator. Can only set on.",
+                    "Multiple tags for one operator. Can only set one tag.",
                     qsv);
       }
       if (topOp.op == OpType::ROOT) {
@@ -250,7 +250,7 @@ IteratorPtr QueryParser::getIterator(const std::string& q) {
     }
   }
   if (stack.size() > 1) {
-    logAndThrow(stack.top().startPos, "Unmatched right parenthesis '('.", qsv);
+    logAndThrow(stack.top().startPos, "Unmatched left parenthesis '('.", qsv);
   }
   DCHECK(!stack.empty());
   return std::move(stack.top()).close(qsv.substr(qsv.size()), qsv);
