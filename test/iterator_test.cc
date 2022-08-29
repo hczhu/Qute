@@ -1,3 +1,9 @@
+// Copyright 2022 HC Zhu hczhu.github@gmail.com
+
+// Use of this source code is governed by an MIT-style
+// license that can be found in the LICENSE file or at
+// https://opensource.org/licenses/MIT
+
 #include "qute/iterator.h"
 
 #include <ctime>
